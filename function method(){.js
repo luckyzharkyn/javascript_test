@@ -179,3 +179,5 @@ function Hour_Days_Month(hour, days, month){
         return data.getHours() + ":" + data.getMinutes() + ":" + data.getSeconds();
     }
 }
+
+//Скрытый код. 
