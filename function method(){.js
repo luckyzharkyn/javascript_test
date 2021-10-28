@@ -23,14 +23,13 @@ function Main(){
             //show(Summ_numbers([1, 2, 3, 4, 5]));
             // show(Hour_Days_Month(3, 5, 2));
             //show(Now_Time());
+            //show(massiv());
+            // showMassiv();
+            //textMassiv();
+            //instead_Massiv();
+            //assosiative_Massiv();
         }
-        
-       //show(massiv());
-       // showMassiv();
-       //textMassiv();
-       //instead_Massiv();
-       //assosiative_Massiv();
-        
+
         }
 
 function show(name){
@@ -187,7 +186,7 @@ function Hour_Days_Month(hour, days, month){
 //Скрытый код. Работа с массивами
 {
 
-    
+
 //Сортировка массива по возрастанию
 function massiv(){
 var numbers = [146,154,158,160,162,5,7,8,9,10,11,12,14,16,17,98,100,102,104,120,126,18,20,22,24,28,50,51,61,63,65];
@@ -372,3 +371,28 @@ function last_massiv(){
 
 
 }
+
+//Скрытый код. If, else, switch, case
+
+//Если переменная a равна 10, то выведите 'Верно', иначе выведите 'Неверно'.
+function ravno1(){
+    let a = 10;
+    if(a == 10) return true;
+    else return false;
+}
+// show(ravno1());
+
+//В переменной min лежит число от 0 до 59. Определите в какую четверть часа попадает это число (в первую, вторую, третью или четвертую).
+function ravno2(){
+    let min = 0;
+    if(min < 20) return 1;
+    else if(min >= 20 && min < 35) return 2;
+    else if(min >= 35 && min < 45) return 3;
+    else return 4;
+}
+// show(ravno2());
+
+// Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет значение 'ru', 
+// то в переменную arr запишем массив дней недели на русском языке, а если имеет значение 'en' – то на английском. 
+// Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch.
+    
