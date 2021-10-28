@@ -28,6 +28,8 @@ function Main(){
        //show(massiv());
        // showMassiv();
        //textMassiv();
+       //instead_Massiv();
+       //assosiative_Massiv();
         
         }
 
@@ -206,3 +208,53 @@ function textMassiv(){
     let text = str[0] + str[1] + str[2];
     show(text);
 }
+
+//Дан массив ['Привет, ', 'мир', '!']. Необходимо записать в нулевой элемент этого массива слово 'Пока, ' (то есть вместо слова 'Привет, ' будет 'Пока, ').
+function instead_Massiv(){
+    let str = ['Привет, ', 'мир', '!'];
+    str[0] = 'пока';
+    show(str);
+}
+
+//Создайте ассоциативный массив (объект) заработных плат obj. Выведите на экран зарплату Пети и Коли.
+
+//Этот объект дан:
+function assosiative_Massiv(){
+var obj = {
+    'Коля':'1000', 
+    'Вася':'500', 
+    'Петя':'200'
+};
+    show(obj['Коля']);
+    show(obj.Петя)
+}
+
+//Создайте массив arr с элементами 1, 2, 3, 4, 5 двумя различными способами.
+function create_massiv(){
+    let arr = [1, 2, 3, 4, 5];
+    let arr2 = Array(1, 3, 5, 6);
+    arr[0] = 3;
+    arr[4] = 9;
+    show(arr);
+}
+//create_massiv();
+
+//Дан многомерный массив arr
+//Выведите с его помощью слово 'голубой'
+function Lots_Of_Massiv(){
+var arr = {
+	'ru':['голубой', 'красный', 'зеленый'],
+	'en':['blue', 'red', 'green'],
+};
+show(arr['ru'][0]);
+}
+//Lots_Of_Massiv();
+
+//Создайте массив arr = ['a', 'b', 'c']. Выведите его на экран с помощью функции alert.
+function mass1(){
+    let arr = ['a', 'b', 'c'];
+    alert(arr);
+}
+//mass1();
+
+
