@@ -395,4 +395,22 @@ function ravno2(){
 // Переменная lang может принимать 2 значения: 'ru' 'en'. Если она имеет значение 'ru', 
 // то в переменную arr запишем массив дней недели на русском языке, а если имеет значение 'en' – то на английском. 
 // Решите задачу через 2 if, через switch-case и через многомерный массив без ифов и switch.
-    
+    function ravno3(lang){
+        let arr;
+        if(lang == 'ru'){
+            return arr = ["Понидельник", "Вторник", "Среда", "Четверг", "Пятница", "Субота", "Воскресенье"];
+        }
+        else if(lang == 'en'){
+            return arr = ["Monday", "Tuesday", "Wednesday", "Trusday", "Friday", "Saturday", "Sunday"];
+        }
+    }
+    //show(ravno3('en'));
+    function ravno3_switch(lang){
+        let arr;
+        switch(lang){
+            case 'ru': return arr = ["Понидельник", "Вторник", "Среда", "Четверг", "Пятница", "Субота", "Воскресенье"]; break;
+            case 'en': return arr = ["Monday", "Tuesday", "Wednesday", "Trusday", "Friday", "Saturday", "Sunday"]; break;
+            default: return "error"; break;
+        }
+    }
+    //show(ravno3_switch('en'));
