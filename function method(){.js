@@ -416,5 +416,5 @@ function ravno2(){
     //show(ravno3_switch('en'));
 
     function ravno4(){
-
+      show("hello");
     }
