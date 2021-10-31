@@ -415,9 +415,12 @@ function ravno2(){
     }
     //show(ravno3_switch('en'));
 
-    function ravno4(){
-      show("hello");
-      show("hello2");
-      show("hello3");
-      show("hello4");
+    //Если переменная a равна нулю, то выведите 'Верно', иначе выведите 'Неверно'. Проверьте работу скрипта при a, равном 1, 0, -3.
+    function ravno4(a){
+      if(a == 0){
+        return "right";
+      }
+      else return "incorrect";
     }
+
+    show(ravno4(1));
