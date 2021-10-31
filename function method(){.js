@@ -417,4 +417,5 @@ function ravno2(){
 
     function ravno4(){
       show("hello");
+      show("hello2");
     }
