@@ -999,26 +999,11 @@ function math_op() {
   */
 
   //	Даны числа 4, -2, 5, 19, -130, 0, 10. Найдите минимальное и максимальное число.
-  // let arr11 = [4, -2, 5, 19, -130, 0, 10];
+  //let arr11 = [4, -2, 5, 19, -130, 0, 10];
   // console.log(Math.max.apply(null, arr11));
   // console.log(Math.max(4, -2, 5, 25, -130, 0, 10));
   //console.log(Math.min.apply(null, arr11));
 
-  /*
-   ???????????????????????????????????????????????????????????????????????????????????????????????????????????????????????????
-  let big = 0;
-  for(let i = 0; i < arr11.length; i++) {
-      for(let j = 1; j < arr11.length; j++){
-          if(arr11[i] > arr11[j]){
-               big = arr11[i];
-          } else {
-              big = arr11[j];
-          }
-      }
-  }
-  console.log(big);
-
-  */
 
   //Выведите на экран случайное целое число от 1 до 100.
   /*
@@ -1083,5 +1068,81 @@ function math_op() {
 
 }
 
+//Скрытый код. Задачи на функции работы со строками в JavaScript
+function stroki() {
 
-math_op();
+  //Дана строка 'aaa@bbb@ccc'. Замените все @ на '!' с помощью глобального поиска и замены.
+  /*
+  let str1 = 'aaa@bbb@ccc';
+  console.log(str1.replace(/@/g, "!"));
+  */
+
+  //Дана строка 'aaa bbb ccc'. Вырежите из нее слово 'bbb' тремя разными способами (через substr, substring, slice).
+  /*
+  let str1 = 'aaa bbb ccc';
+  console.log(str1.substr(4, 3));
+  console.log(str1.substring(4, 7));
+  console.log(str1.slice(4, 3));
+  */
+
+  //В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31/12/2025'
+  /*
+  let date = '2025-12-31';
+  console.log(date.substr(8, 2) + "/" + date.substring(5, 7) + "/" + date.slice(0, 4));
+  */
+
+  //Дана строка 'js'. Сделайте из нее строку 'JS'.
+  /*
+  let str1 = 'js';
+  console.log(str1.toUpperCase());
+  */
+
+  //Дана строка 'JS'. Сделайте из нее строку 'js'.
+  /*
+  let str1 = 'JS';
+  console.log(str1.toLowerCase());
+  */
+
+  //Pабота с length, substr, substring, slice. Работа с indexOf
+
+  //Дана строка 'я учу javascript!'. Найдите количество символов в этой строке.
+  /*
+  let str1 = 'я учу javascript!';
+  console.log(str1.length);
+  */
+
+  // Дана строка 'я учу javascript!'. Вырежите из нее слово 'учу' и слово 'javascript' тремя разными способами (через substr, substring, slice).
+  /*
+  let str1 = 'я учу javascript!';
+  console.log(str1.substr(2, 3) + " " + str1.substring(6, 16));
+  console.log(str1.slice(6, 16));
+  */
+
+  // Дана строка 'я учу javascript!'. Найдите позицию подстроки 'учу'.
+  /*
+  let str1 = 'я учу javascript! учу';
+  console.log(str1.indexOf('учу', 5));
+  */
+
+  // Дана переменная str, в которой хранится какой-либо текст. Реализуйте обрезание длинного текста по следующему принципу:
+  //если количество символов этого текста больше заданного в переменной n, то в переменную result запишем первые n символов
+  //строки str и добавим в конец троеточие '...'. В противном случае в переменную result запишем содержимое переменной str.
+  /*
+  let result;
+  if(stroka3.length > n) {
+      return result = stroka3.slice(0, n+1) + "...";
+  } else {
+      return result = stroka3;
+  }
+
+  show(stroki("hello world mother", 12));
+  */
+
+  //Дана строка 'Я-учу-javascript!'. Замените все дефисы на '!' с помощью глобального поиска и замены.
+  /*
+  let str1 = 'Я-учу-javascript!';
+  console.log(str1.replace(/-/g, "!"));
+  */
+
+}
+stroki();
