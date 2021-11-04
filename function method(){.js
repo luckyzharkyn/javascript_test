@@ -1,8 +1,6 @@
 "use strict"
 
-function show(name) {
-  console.log(name);
-}
+let show = (name) => console.log(name); // console.log сокращенный
 
 //Скрытый код. Работа с переменными
 {
@@ -1144,5 +1142,54 @@ function stroki() {
   console.log(str1.replace(/-/g, "!"));
   */
 
+  //Дана строка 'я учу javascript!'. С помощью метода split запишите каждое слово этой строки в отдельный элемент массива.
+  /*
+  let str1 = 'я учу javascript!';
+  console.log(str1.split(" "));
+  */
+
+  // Дана строка 'я учу javascript!'. С помощью метода split запишите каждый символ этой строки в отдельный элемент массива.
+  /*
+  let str1 = 'я учу javascript!';
+  console.log(str1.split(""));
+  */
+
+  // В переменной date лежит дата в формате '2025-12-31'. Преобразуйте эту дату в формат '31.12.2025'.
+  //let date = '2025-12-31';
+  //date = date.split("-");
+  //console.log(date[2] + "." + date[1] + "." + date[0]);
+
+  //Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в строку 'я+учу+javascript+!'
+  /*
+  let arr14 = ['я', 'учу', 'javascript', '!'];
+  console.log(arr14.join("+"));
+  */
+  
+  //Преобразуйте первую букву строки в верхний регистр.
+  /*
+  let str1 = 'hello world';
+  console.log(str1[0].toUpperCase() + str1.slice(1));
+  */
+
+  // Преобразуйте первую букву каждого слова строки в верхний регистр.
+  /*
+  let str1 = 'hello world';
+  let str1_massiv = str1.split(" ");
+  str1 = str1_massiv[0][0].toUpperCase() + str1_massiv[0].slice(1) + " " + str1_massiv[1][0] + str1_massiv[1].slice(1);
+  console.log(str1);
+  */
+
+  // Преобразуйте строку 'var_test_text' в 'varTestText'. Скрипт, конечно же, должен работать с любыми аналогичными строками.
+  /*
+  let str1 = 'var_test_text';
+  let str2 = str1.split("_");
+  for(let i = 0; i < str2.length; i++) {
+    str2[i] = str2[i][0].toUpperCase() + str2[i].slice(1);
+  }
+  str1 = str2.join(" ");
+  console.log(str1);
+  */
+
+  
 }
 stroki();
