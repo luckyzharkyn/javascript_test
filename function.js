@@ -1,30 +1,22 @@
 "use strict"
 
-function test(name){
-	return "Hello " + name;
+let method = (name = "Samat") => console.log(name);
+
+//method("zharkyn");
+
+let method2 = (...name) => console.log(name);
+
+//method2(3, 4, 5);
+
+let method3 = (name1, ...name) => {
+	console.log(name1); 
+	console.log(name);
 }
 
-const test_v = function(name1){
-	return "hello " + name1
-}
+//method3('hello world', 4, 5, 6, 7);
 
-const test_a = (name) => {
-	return "Zharkyn" + name;
-}
+let method4 = (name) => console.log(Math.max(...name));
 
-const test_b = (name) => "Zharkyn1 " + name;
+//method4([1, 2, 3, 4]);
 
-const test_s = (name = "Danil") => {
-	return "hello " + name;
-}
-
-const test_e = (...numbers) => {
-	console.log(numbers);
-}
-
-test_e(1, 3, 5);
-
-const [num1, ...num2] = [1, 3, 5, 6];
-
-console.log(num1, num2);
 
