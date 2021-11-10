@@ -1643,4 +1643,132 @@ const massiv_prieme = () => {
   console.log(summ);
   */
 }
-massiv_prieme();
+
+//скрытый код. Правильное использование пользовательских функции
+const right_func = () => {
+
+  //Дан массив с числами. Создайте из него новый массив, где останутся лежать только положительные числа. 
+  // Создайте для этого вспомогательную функцию isPositive(), 
+  // которая параметром будет принимать число и возвращать true, если число положительное, и false - если отрицательное. 
+
+  let polozhitelnie_figures = (mass) => {
+    let result = [];
+    for(let i = 0; i < mass.length; i++) {
+      if(isPositive(mass[i])) result.push(mass[i]);
+    }
+    return result;
+  }
+
+  let isPositive = (figure) => {
+    if(figure >= 0) {
+      return true;
+    } else return false;
+  }
+
+  show(polozhitelnie_figures([1, 2, -2, 4, 3, -6, -1, -4, 544, -2]));
+
+}
+
+//скрытый код. Практика на работу с пользовательскими функциями
+const practica_func = () => {
+  //реализуйте функцию inArray, которая будет проверять, есть ли в массиве элемент с таким значением или нет. 
+  // Первым параметром функция должна принимать значение, а вторым - массив. 
+  // Если такой элемент есть - функция должна вернуть true, а если нет - false. 
+
+  const inArray = (name, name1) => {
+    let str = String(name1).split(',');
+
+    for(let i = 0; i < str.length; i++) {
+      if(name == Number(str[i])) {
+        return true;
+      }
+    }
+    return false;
+  }
+
+  // реализуйте функцию isSimple, которая параметром будет принимать число и проверять, простое оно или нет. 
+  // Простое число - это число, которое не делится ни на одно другое число (кроме как на 1 и на само себя - на это делятся все числа). 
+  // Если число простое - функция должна вернуть true, в противном случае false. 
+  const isSimple = (name) => {
+    for(let i = 2; i < name; i++) {
+      if(name%i == 0) 
+      return true;
+    }
+    return false;
+  }
+  
+  //реализуйте функцию getDivisors, которая параметром будет принимать число и возвращать массив его делителей, 
+  // то есть чисел, на которое делится наше число. 
+  // К примеру, если мы передадим число 24 - мы должны получить массив [1, 2, 3, 4, 6, 12, 24]. 
+  const getDivisors = (name) => {
+    let mass = [];
+
+    for(let i = 1; i <= name; i++) {
+      if(name%i == 0) {
+        mass.push(i);
+      }
+    }
+    return mass;
+  }
+
+  //реализуйте функцию getIntersection, которая параметрами будет принимать два массива и возвращать массив элементов, 
+  // которые есть и в одном, и во втором массиве (это называется пересечение массивов). 
+  // К примеру, getIntersection([1, 2, 3], [2, 3, 4]) должно вернуть [2, 3]. 
+  const getIntersection = (mass, mass1) => {
+    let newMass = [];
+
+    for(let i = 0; i < mass.length; i++) {
+      if(inArray(mass[i], mass1)){
+        if(inArray(mass[i], newMass)) {
+        } else {
+        newMass.push(mass[i]);
+        }
+      }
+    }
+    return newMass;
+  }
+
+  // реализуйте функцию getGreatestCommonDivisor, которая параметрами будет принимать два числа и возвращать 
+  // наибольший общий делитель (НОД) этих двух чисел. К примеру, для чисел 12 и 18 НОД равен 6. 
+  const getGreatestCommonDivisor = (name, name1) => {
+    let mass = getIntersection(getDivisors(name), getDivisors(name1));
+    return mass[mass.length - 1];
+  }
+
+
+  // Дана строка. Сделайте заглавным первый символ каждого слова этой строки. Для этого сделайте вспомогательную функцию ucfirst, 
+  //которая будет получать строку, делать первый символ этой строки заглавным и возвращать обратно строку с заглавной первой буквой.
+
+  const ucfirst = (str) => {
+    return String(str[0].toUpperCase() + str.slice(1));
+  }
+
+  const WordsUpper = (str) => {
+    let mass = [];
+    let str1 = str.replace(/_/g, ' ').split(' ');
+    for(let i = 0; i < str1.length; i++) {
+      mass.push(ucfirst(str1[i]));
+    }
+
+    return mass.join(' ');
+  }
+
+  // Дана строка вида 'var_text_hello'. Сделайте из него текст 'varTextHello'.
+
+  const wordsTogether = (text) => {
+     return WordsUpper(text);
+  }
+
+  // Сделайте функцию inArray, которая определяет, есть в массиве элемент с заданным текстом или нет. 
+  //Функция первым параметром должна принимать текст элемента, а вторым - массив, в котором делается поиск. 
+  //Функция должна возвращать true или false.
+
+  const inArray2 = (text, mass) => {
+    for(let i = 0; i < mass.length; i++) {
+      if(text == mass[i]) return true;
+    }
+    return false;
+  }
+
+}
+
