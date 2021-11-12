@@ -1927,7 +1927,3 @@ for(let i = 0; i < mass.length; i++) {
 
 }
 
-//скрытый код. Основы работы с DOM в Javascript
-const DOM = () => {
-  
-}
